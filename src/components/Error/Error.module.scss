@@ -1,0 +1,10 @@
+@import "../../styles/variables.scss";
+
+.error {
+  display: flex;
+  justify-content: center;
+  height: calc(40vh);
+  strong{
+    color: red;
+  }
+}

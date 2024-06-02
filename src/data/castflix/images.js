@@ -1,0 +1,6 @@
+import image1 from "./353363556_804842517635768_2564950774428692034_n.jpg";
+import image2 from "./353899765_790357339427237_2158067418414079859_n.jpg";
+import image3 from "./354700024_945853123394808_1338382855685289376_n.jpg";
+
+const images = [image1, image2,image3];
+export default images;

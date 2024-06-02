@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+::-webkit-scrollbar{
+  width: 1em;
+}
+
+::-webkit-scrollbar-track{
+  background: rgba($secondary,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+  background: $primary;
+  // border-radius: $borderRadius;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: rgba($primary,0.7);
+}
+
+body {
+  width: 100%;
+  font-family: $Poppins;
+  color: $dark;
+  background: $bg;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}

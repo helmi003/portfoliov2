@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $dark;
+  width: 100%;
+  height: $headerHeight;
+  padding: 0 1.5rem;
+  @include breakpoint(md) {
+    padding: 0 3rem;
+  }
+  transition: 0.3s ease all;
+  color: $light;
+  &__span {
+    &__name {
+      color: $primary;
+    }
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    &__icon {
+      padding-right: 10px;
+    }
+    i{
+      color: $light;
+      &:hover{
+        color: $secondary;
+      }
+    }
+  }
+}
