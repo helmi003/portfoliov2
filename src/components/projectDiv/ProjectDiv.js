@@ -6,8 +6,9 @@ function projectDiv({ project }) {
   console.log(project)
   return (
     <div>
-      <img src={project.screenshots[0]} alt={project.screenshots[0]} />
       <Link to={`/Portfolio/${project.id}`}>
+      <img src={project.screenshots[0]} alt={project.screenshots[0]} />
+      
         <p>
           <span>{project.title}</span>
           <br />

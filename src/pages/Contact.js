@@ -118,7 +118,7 @@ const Contact = () => {
               rows="8"
               cols="40"
               pattern="[\s\S]{10,}"
-              placeholder="Message"
+              placeholder="Message..."
               onBlur={handleFocus}
               focused={focused.toString()}
               required

@@ -2,6 +2,7 @@ import React from "react";
 import profile from "../assets/images/helmi2.png";
 import classes from "../components/Layout/Layout.module.scss";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 const About = () => {
   const { t } = useTranslation();
   return (
@@ -28,9 +29,9 @@ const About = () => {
             <br />
             <p>{t("I started coding since I was in school")}</p>
             <br />
-            <p>{t("My vision is to make the world a better place")}</p>
+            <p>{t("I'm also working as a freelancer in my free time. During my education, I have participated in multiple clubs and hackathons to gain more experience and tackle various challenges.")}</p>
             <br />
-            <p>{t("With a passion for innovation")}</p>
+            <p>{t("I am passionate about transforming ideas into functional and intuitive applications, and I am eager to contribute my skills and expertise to impactful projects.")}</p>
           </div>
           <div>
             <img
@@ -104,15 +105,24 @@ const About = () => {
               </div>
               <div className={classes.container__about__rest__part__col2}>
                 <div>
-                  <span>Nabeul</span> <span>{t("FrontEnd Developer")}</span>
+                  <span>Nabeul</span> <span>{t("FrontEnd Developer")}</span>{" "}
+                  <Link to={`/Portfolio/0`}>
+                    <i className="fa fa-arrow-right"></i> {t("Read more")}
+                  </Link>
                 </div>
                 <div>
                   <span>Nabeul</span>{" "}
-                  <span>{t("FrontEnd and BackEnd Developer")}</span>
+                  <span>{t("FrontEnd and BackEnd Developer")}</span>{" "}
+                  <Link to={`/Portfolio/3`}>
+                    <i className="fa fa-arrow-right"></i> {t("Read more")}
+                  </Link>
                 </div>
                 <div>
                   <span>Sousse</span>{" "}
-                  <span>{t("FrontEnd and BackEnd Developer")}</span>
+                  <span>{t("FrontEnd and BackEnd Developer")}</span>{" "}
+                  <Link to={`/Portfolio/6`}>
+                    <i className="fa fa-arrow-right"></i> {t("Read more")}
+                  </Link>
                 </div>
               </div>
             </div>

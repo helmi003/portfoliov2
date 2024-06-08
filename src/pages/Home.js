@@ -51,8 +51,8 @@ const Home = () => {
           </div>
           <div className={classes.container__home__services__content}>
             <div className={classes.container__home__services__content__div}>
-              <i className="fa fa-desktop"></i>
-              <h3>{t("web design")}</h3>
+              <i className="fa fa-palette"></i>
+              <h3>UI/UX</h3>
               <p>
                 {t(
                   "I do ui/ux design for both mobile and web that it helps to get a unique look"
@@ -84,7 +84,7 @@ const Home = () => {
             <h4>{t("some of my recent works")}</h4>
             <h1>{t("Projects")}</h1>
           </div>
-          <div className={classes.container__home__services__content}>
+          <div className={classes.container__portfolio__content}>
             {data.slice(-3).map((project) => (
               <ProjectDiv project={project} key={project.id} />
             ))}

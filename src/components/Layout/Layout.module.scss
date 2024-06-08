@@ -46,7 +46,6 @@
         padding: 0 2rem;
       }
       p {
-        padding-left: 10px;
         max-width: 900px;
         text-align: justify;
       }
@@ -73,7 +72,7 @@
       &__content {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        // align-items: center;
         justify-content: space-around;
         &__div {
           display: flex;
@@ -81,7 +80,7 @@
           flex-direction: column;
           p {
             margin-top: 10px;
-            max-width: 250px;
+            max-width: 300px;
             text-align: center;
           }
           h3 {
@@ -95,52 +94,6 @@
       }
     }
     &__portfolio {
-      a {
-        text-decoration: none;
-        color: $dark;
-      }
-      div {
-        margin-bottom: 30px;
-      }
-      p {
-        @media only screen and (max-width: 768px) {
-          max-width: 300px;
-        }
-        margin-top: 10px;
-        a {
-          text-decoration: none;
-        }
-        border: 1px solid rgba($secondary, 0.5);
-        border-radius: $borderRadius;
-        padding: 5px 10px;
-        max-width: 400px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        &:hover {
-          background: rgba($secondary, 0.2);
-          cursor: pointer;
-        }
-        span {
-          font-size: 25px;
-          font-weight: 900;
-          color: $dark;
-        }
-      }
-      img {
-        @media only screen and (max-width: 768px) {
-          max-height: 180px;
-          max-width: 300px;
-        }
-        max-height: 200px;
-        max-width: 400px;
-        border-radius: $borderRadius;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
       &__more {
         text-align: center;
         font-size: 18px;
@@ -222,6 +175,7 @@
         max-width: 350px;
         input,
         textarea {
+          background-color: inherit;
           padding: 1.2rem;
           border-radius: $borderRadius;
           text-decoration: none;
@@ -238,10 +192,12 @@
           color: red;
           display: none;
         }
-        input,textarea:invalid[focused="true"] {
+        input,
+        textarea:invalid[focused="true"] {
           border: 1px solid red;
         }
-        input,textarea:invalid[focused="true"] ~ span {
+        input,
+        textarea:invalid[focused="true"] ~ span {
           display: block;
         }
       }
@@ -281,11 +237,13 @@
           max-height: 200px;
         }
         justify-content: center;
+        text-align: center;
       }
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      text-align: justify;
       &__name {
         color: $primary;
       }
@@ -305,6 +263,7 @@
       max-width: 600px;
     }
     &__rest {
+      text-align: justify;
       h1 {
         color: $primary;
         margin-bottom: 5px;
@@ -328,7 +287,8 @@
         &__col1 {
           margin-right: 100px;
           @media only screen and (max-width: 768px) {
-            margin-right: 5px;
+            display: inline-block;
+            margin: 5px;
           }
         }
         &__col2 {
@@ -336,6 +296,18 @@
             border-radius: $borderRadius;
             background-color: rgba($secondary, 0.1);
             padding: 5px 10px;
+            @media only screen and (max-width: 768px) {
+              display: inline-block;
+              margin: 5px;
+            }
+          }
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            color: $secondary;
+            &:hover {
+              color: rgba($secondary, 0.5);
+            }
           }
         }
       }
@@ -356,10 +328,12 @@
         @media only screen and (max-width: 768px) {
           margin-top: 5px;
         }
+        background-color: inherit;
         padding: 0.8rem;
         border-radius: $borderRadius;
         text-decoration: none;
-        border: none;
+        border: 1px solid rgba($dark, 0.5);
+        border-radius: 15px;
         outline: none;
         min-width: 100px;
         width: 400px;
@@ -380,27 +354,26 @@
       }
       div {
         margin-bottom: 30px;
+        border: 3px solid rgba($secondary, 0.5);
+        border-radius: 15px;
+        &:hover {
+          background: rgba($secondary, 0.2);
+          cursor: pointer;
+        }
       }
       p {
         @media only screen and (max-width: 768px) {
           max-width: 300px;
         }
-        margin-top: 10px;
         a {
           text-decoration: none;
         }
-        border: 1px solid rgba($secondary, 0.5);
-        border-radius: $borderRadius;
         padding: 5px 10px;
         max-width: 400px;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-        &:hover {
-          background: rgba($secondary, 0.2);
-          cursor: pointer;
-        }
         span {
           font-size: 25px;
           font-weight: 900;
@@ -414,7 +387,7 @@
         }
         max-height: 200px;
         max-width: 400px;
-        border-radius: $borderRadius;
+        border-radius: $borderRadius $borderRadius 0px 0px;
         display: block;
         margin-left: auto;
         margin-right: auto;
