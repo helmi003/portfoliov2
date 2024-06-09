@@ -29,9 +29,17 @@ const About = () => {
             <br />
             <p>{t("I started coding since I was in school")}</p>
             <br />
-            <p>{t("I'm also working as a freelancer in my free time. During my education, I have participated in multiple clubs and hackathons to gain more experience and tackle various challenges.")}</p>
+            <p>
+              {t(
+                "I'm also working as a freelancer in my free time. During my education, I have participated in multiple clubs and hackathons to gain more experience and tackle various challenges."
+              )}
+            </p>
             <br />
-            <p>{t("I am passionate about transforming ideas into functional and intuitive applications, and I am eager to contribute my skills and expertise to impactful projects.")}</p>
+            <p>
+              {t(
+                "I am passionate about transforming ideas into functional and intuitive applications, and I am eager to contribute my skills and expertise to impactful projects."
+              )}
+            </p>
           </div>
           <div>
             <img
@@ -76,7 +84,7 @@ const About = () => {
                 </div>
                 <div>
                   <span>Django</span> <span>Node-js</span> <span>Symfony</span>{" "}
-                  <span>Spring boot</span>
+                  <span>Spring boot</span> <span>Keycloack</span>
                 </div>
                 <div>
                   <span>Firebase</span> <span>MongoDB</span> <span>MySQL</span>{" "}
