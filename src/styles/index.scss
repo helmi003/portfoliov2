@@ -5,22 +5,16 @@
   margin: 0;
 }
 
-
-::-webkit-scrollbar{
-  width: 1em;
+::-webkit-scrollbar {
+  width: 0.8em;
 }
 
-::-webkit-scrollbar-track{
-  background: rgba($secondary,0.5);
+::-webkit-scrollbar-track {
+  background: rgba($dark, 0.5);
 }
 
-::-webkit-scrollbar-thumb{
-  background: $primary;
-  // border-radius: $borderRadius;
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background: rgba($primary,0.7);
+::-webkit-scrollbar-thumb {
+  background: $dark;
 }
 
 body {

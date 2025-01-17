@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import Loading from "./components/Loading/Loading";
+import Loading from "./components/Loading";
 import App from "./App";
 import "./styles/index.scss";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -8,6 +8,8 @@ import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./components/Theme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -33,7 +35,9 @@ const loadingMarkup = <Loading />;
 root.render(
   <Suspense fallback={loadingMarkup}>
     <Router>
-      <App />
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
     </Router>
   </Suspense>
 );

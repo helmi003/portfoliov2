@@ -11,6 +11,7 @@ import Project from "./pages/Project";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/index.scss";
+import Memories from "./pages/Memories";
 function App() {
   return (
     //<Provider store={store}>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Portfolio" element={<Portfolio />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Portfolio/:id" element={<Project />} />
+          <Route path="/Memories" element={<Memories />} />
         </Routes>
       </Layout>
       <ToastContainer />

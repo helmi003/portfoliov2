@@ -1,103 +1,197 @@
 import React from "react";
 import profile from "../assets/images/helmi4.png";
-import classes from "../components/Layout/Layout.module.scss";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import ProjectDiv from "../components/projectDiv/ProjectDiv";
+import ProjectDiv from "../components/ProjectDiv";
 import data from "../data/data";
+import { Box, Grid2, Typography, useTheme } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import CodeIcon from "@mui/icons-material/Code";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import classes from "../components/Layout/Layout.module.scss";
 
 const Home = () => {
   const { t } = useTranslation();
+  const theme = useTheme();
+  const [text] = useTypewriter({
+    words: [
+      t("I Engineer Ideas into Reality"),
+      t("I love Building Things"),
+      t("I Thrive on Problem-Solving"),
+      t("I Create with Purpose"),
+      t("I Design Functional Experiences"),
+      t("I Shape the Future Through Code"),
+      t("I Code to Make a Difference"),
+      t("I Build with Precision and Passion"),
+    ],
+    loop: 0,
+  });
+  const services = [
+    {
+      id: 1,
+      icon: <DesignServicesIcon sx={{ fontSize: 40, color: "primary.main" }} />,
+      title: "UI/UX",
+      description: t(
+        "I do ui/ux design for both mobile and web that it helps to get a unique look"
+      ),
+    },
+    {
+      id: 2,
+      icon: <CodeIcon sx={{ fontSize: 40, color: "primary.main" }} />,
+      title: "Web Dev",
+      description: t(
+        "I also develop websites. I always try to create high performance websites"
+      ),
+    },
+    {
+      id: 3,
+      icon: <PhoneIphoneIcon sx={{ fontSize: 40, color: "primary.main" }} />,
+      title: t("app Dev"),
+      description: t(
+        "I develop mobile application. I create mobile app with Flutter"
+      ),
+    },
+  ];
   return (
-    <>
-      <div className={classes.container__home}>
-        <div className={classes.container__home__identificator}>
-          <div>
-            <h1>
-              {t("hi")}{" "}
-              <span className={classes.container__home__identificator__name}>
-                Helmi Ben Romdhane{" "}
-              </span>
-              <br />
-              {t("I Like Building Things")}
-              <br />
-              <span className={classes.container__home__identificator__title}>
-                {t("Mobile and Web Developer")} <br />
-                {t("Life Long Learner")}
-              </span>
-            </h1>
-          </div>
-          <div>
-            <img
-              src={profile}
-              alt="Profile_picture"
-              className={classes.container__home__profile}
-            />
-          </div>
-        </div>
-        <div className={classes.container__home__about}>
-          <h1>
-            {t("About")}{" "}
-            <Link to="/About">
-              <i className="fa fa-arrow-right"></i> {t("Read more")}
-            </Link>
-          </h1>
-          <p>{t("I_am_a_mobile_and_web_developer")}</p>
-        </div>
-        <div className={classes.container__home__services}>
-          <div className={classes.container__home__services__title}>
-            <h4>{t("What i can do")}</h4>
-            <h1>{t("Services")}</h1>
-          </div>
-          <div className={classes.container__home__services__content}>
-            <div className={classes.container__home__services__content__div}>
-              <i className="fa fa-palette"></i>
-              <h3>UI/UX</h3>
-              <p>
-                {t(
-                  "I do ui/ux design for both mobile and web that it helps to get a unique look"
-                )}
-              </p>
-            </div>
-            <div className={classes.container__home__services__content__div}>
-              <i className="fa fa-code"></i>
-              <h3>{t("web dev")}</h3>
-              <p>
-                {t(
-                  "I also develop websites. I always try to create high performance websites"
-                )}
-              </p>
-            </div>
-            <div className={classes.container__home__services__content__div}>
-              <i className="fa fa-mobile"></i>
-              <h3>{t("app Dev")}</h3>
-              <p>
-                {t(
-                  "I develop mobile application. I create mobile app with Flutter"
-                )}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className={classes.container__home__portfolio}>
-          <div className={classes.container__home__services__title}>
-            <h4>{t("some of my recent works")}</h4>
-            <h1>{t("Projects")}</h1>
-          </div>
-          <div className={classes.container__portfolio__content}>
-            {data.slice(-3).map((project) => (
-              <ProjectDiv project={project} key={project.id} />
-            ))}
-          </div>
-          <br />
-          <div className={classes.container__home__portfolio__more}>
-            <h4>
-              <Link to="/Portfolio">{t("View more projects")}</Link>
-            </h4>
-          </div>
-        </div>
-      </div>
-    </>
+    <Box>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Box sx={{ maxWidth: 700 }}>
+          <Typography alignItems="center" variant="h4" sx={{ fontWeight: 800 }}>
+            {t("hi")}{" "}
+            <Typography
+              component="span"
+              variant="inherit"
+              sx={{ color: theme.palette.primary.main }}
+            >
+              Helmi Ben Romdhane
+            </Typography>{" "}
+            <Box>
+              {text}
+              <Cursor cursorColor={theme.palette.primary.main} />
+            </Box>
+            <Typography
+              variant="inherit"
+              sx={{ color: theme.palette.secondary.main }}
+            >
+              {t("Mobile and Web Developer")}
+            </Typography>
+            {t("Life Long Learner")}
+          </Typography>
+        </Box>
+        <img height={350} src={profile} alt="Profile_picture" />
+      </Box>
+      <Box>
+        <Typography variant="h5" sx={{ fontWeight: 800 }}>
+          {t("About")}{" "}
+          <Link
+            to="/About"
+            style={{
+              color: theme.palette.primary.main,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
+            <ArrowForwardIcon fontSize="small" />
+            {t("Read more")}
+          </Link>
+        </Typography>
+        <Typography variant="body1" maxWidth={900} textAlign="justify">
+          {t("I_am_a_mobile_and_web_developer")}
+        </Typography>
+      </Box>
+      <Box className={classes.block}>
+        <Box
+          display="flex"
+          alignItems="center"
+          flexDirection="column"
+          marginY={6}
+        >
+          <Typography variant="body1" sx={{ fontWeight: 800 }}>
+            {t("What i can do")}
+          </Typography>
+          <Typography variant="h4" sx={{ fontWeight: 800 }}>
+            {t("Services")}
+          </Typography>
+        </Box>
+        <Box
+          display="flex"
+          gap={3}
+          flexWrap="wrap"
+          justifyContent="space-around"
+        >
+          {services.map((service) => (
+            <Box
+              key={service.id}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                maxWidth: 300,
+              }}
+            >
+              {service.icon}
+              <Typography variant="h6" sx={{ fontWeight: "bold", mt: 1 }}>
+                {service.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {service.description}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+      <Box className={classes.block}>
+        <Box
+          display="flex"
+          alignItems="center"
+          flexDirection="column"
+          marginY={6}
+        >
+          <Typography variant="body1" sx={{ fontWeight: 800 }}>
+            {t("some of my recent works")}
+          </Typography>
+          <Typography variant="h4" sx={{ fontWeight: 800 }}>
+            {t("Projects")}
+          </Typography>
+        </Box>
+        <Grid2
+          container
+          spacing={4}
+          justifyContent="center"
+          alignItems="center"
+        >
+          {data.slice(-3).map((project) => (
+            <ProjectDiv project={project} key={project.id} />
+          ))}
+        </Grid2>
+        <br />
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: 800 }}
+          textAlign="center"
+          alignItems="center"
+        >
+          <Link
+            to="/Portfolio"
+            style={{
+              color: theme.palette.primary.main,
+              textDecoration: "none",
+            }}
+          >
+            {t("View more projects")}
+          </Link>
+        </Typography>
+      </Box>
+    </Box>
   );
 };
 

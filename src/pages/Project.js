@@ -1,69 +1,110 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
-import classes from "../components/Layout/Layout.module.scss";
-import ImageSlider from "../components/ImageSlider/ImageSlider";
+import ImageSlider from "../components/ImageSlider";
 import cookies from "js-cookie";
 import data from "../data/data";
+import { Box, Typography, useTheme } from "@mui/material";
+import ButtonComponent from "../components/ButtonComponent";
 
 export default function Project() {
   const lang = cookies.get("i18next") || "en";
   const { t } = useTranslation();
   let { id } = useParams();
   const project = data[id];
+  const theme = useTheme();
   return (
-    <>
-      <div className={classes.container__project}>
-        <h1>{project?.title}</h1>
-        <p>{lang === "en" ? project?.subtitle : project?.subtitleFR} </p>
-        <hr />
-        <h2>{t("About the project")}</h2>
-        <p>{lang === "en" ? project?.about : project?.aboutFR} </p>
-        <br />
-        {project?.link ? (
-          <div>
-            <h2>
-              {t("Link")}: <a href={project.link}>{project.link}</a>
-            </h2>
-            <br />
-          </div>
-        ) : null}
-        <h2>{t("Technologies")}</h2>
-        <ul>
-          {project.technologies?.map((technologie) => (
-            <li key={technologie}>{technologie}</li>
-          ))}
-        </ul>
-        <br />
-        <h2>{t("Screenshots")}</h2>
-        <ImageSlider slides={project?.screenshots} />
-        <br />
-        <h2>{t("Showcase")}</h2>
-        <div className={classes.container__project__buttons}>
-          {project?.showcase?.[0] === "" ? (
-            <button className={classes.container__project__buttons__button1}>
-              DEMO
-            </button>
-          ) : (
-            <a href={project?.showcase?.[0]}>
-              <button className={classes.container__project__buttons__button1}>
-                DEMO
-              </button>
+    <Box>
+      <Typography variant="h5" sx={{ fontWeight: 800 }}>
+        {project?.title}
+      </Typography>
+      <Typography variant="body1">
+        {lang === "en" ? project?.subtitle : project?.subtitleFR}
+      </Typography>
+      <hr
+        style={{
+          marginTop: "20px",
+          marginBottom: "20px",
+          height: "4px",
+          borderRadius: "4px",
+          backgroundColor: theme.palette.primary.main,
+        }}
+      />
+      <Typography variant="h6" sx={{ fontWeight: 800 }}>
+        {t("duration")}
+      </Typography>
+      <Typography variant="body1">
+        {lang === "en" ? project?.date : project?.dateFR}
+      </Typography>
+      <Typography variant="h6" sx={{ fontWeight: 800 }}>
+        {t("Type")}
+      </Typography>
+      <Typography variant="body1">
+        {lang === "en" ? project?.type : project?.typeFR}
+      </Typography>
+      <Typography variant="h6" sx={{ fontWeight: 800 }}>
+        {t("location")}
+      </Typography>
+      <Typography variant="body1">{project?.place} </Typography>
+      <br />
+      <Typography variant="h6" sx={{ fontWeight: 800 }}>
+        Classification
+      </Typography>
+      <Typography variant="body1">
+        {lang === "en" ? project?.about : project?.aboutFR}{" "}
+      </Typography>
+      <br />
+      {project?.link && (
+        <>
+          <Typography variant="h6" sx={{ fontWeight: 800 }}>
+            {t("Link")}: <a href={project.link}>{project.link}</a>
+          </Typography>
+          <br />
+        </>
+      )}
+      <Typography variant="h6" sx={{ fontWeight: 800 }}>
+        {t("tasks")}
+      </Typography>
+      <ul>
+        {lang === "en"
+          ? project?.tasks?.map((task) => <li key={task}>{task}</li>)
+          : project.tasksFR?.map((task) => <li key={task}>{task}</li>)}
+      </ul>
+      <br />
+      <Typography variant="h6" sx={{ fontWeight: 800 }}>
+        {t("Technologies")}
+      </Typography>
+      <ul>
+        {project.technologies?.map((technologie) => (
+          <li key={technologie}>{technologie}</li>
+        ))}
+      </ul>
+      <br />
+      <Typography gutterBottom variant="h6" sx={{ fontWeight: 800 }}>
+        {t("Screenshots")}
+      </Typography>
+      <ImageSlider slides={project?.screenshots} />
+      <br />
+      <Typography variant="h6" sx={{ fontWeight: 800 }}>
+        {t("Showcase")}
+      </Typography>
+      <Box gap={2} display="flex">
+        {["DEMO", "SOURCE CODE"].map((text, index) => {
+          const link = project?.showcase?.[index] || "";
+          const isDemo = text === "DEMO";
+          const variant = isDemo ? "contained" : "outlined";
+          const buttonComponent = (
+            <ButtonComponent variant={variant} text={text} loading={false} />
+          );
+          return link ? (
+            <a href={link} key={text}>
+              {buttonComponent}
             </a>
-          )}
-          {project?.showcase?.[1] === "" ? (
-            <button className={classes.container__project__buttons__button2}>
-              SOURCE CODE
-            </button>
           ) : (
-            <a href={project?.showcase?.[1]}>
-              <button className={classes.container__project__buttons__button2}>
-                SOURCE CODE
-              </button>
-            </a>
-          )}
-        </div>
-      </div>
-    </>
+            <React.Fragment key={text}>{buttonComponent}</React.Fragment>
+          );
+        })}
+      </Box>
+    </Box>
   );
 }

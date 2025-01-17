@@ -1,6 +1,7 @@
-import image1 from "./ed24f361-c58a-4e46-af1e-868d4da5f0c5.jpg";
-import image2 from "./Screenshot_1717273239.png";
-import image3 from "./Screenshot_1717273259.png";
+
+import image1 from "./Screenshot_1717273259.png";
+import image2 from "./ed24f361-c58a-4e46-af1e-868d4da5f0c5.jpg";
+import image3 from "./Screenshot_1717273239.png";
 import image4 from "./Screenshot_1717273264.png";
 import image5 from "./Screenshot_1717273264.png";
 import image6 from "./Screenshot_1717273269.png";

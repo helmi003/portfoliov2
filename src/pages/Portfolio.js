@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import classes from "../components/Layout/Layout.module.scss";
-import ProjectDiv from "../components/projectDiv/ProjectDiv";
-import ErrorMessage from "../components/Error/Error.js";
+import ProjectDiv from "../components/ProjectDiv";
+import ErrorMessage from "../components/ErrorMessage";
 import { useTranslation } from "react-i18next";
 import data from "../data/data";
+import Grid from "@mui/material/Grid2";
+import TextFieldCompnent from "../components/TextFieldComponent";
+import { Box, Typography } from "@mui/material";
 
 const Portfolio = () => {
   const { t } = useTranslation();
@@ -23,30 +25,40 @@ const Portfolio = () => {
   };
 
   return (
-    <>
-      <div className={classes.container__portfolio}>
-        <div className={classes.container__portfolio__search}>
-          <h1>{t("Some of my recent works")}</h1>
-          <input
-            type="text"
-            id="search"
-            name="search"
-            value={search}
-            placeholder={t("Search")}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className={classes.container__portfolio__content}>
-          {reversedResults.length > 0 ? (
-            reversedResults.map((project) => (
-              <ProjectDiv project={project} key={project.id} />
-            ))
-          ) : (
-            <ErrorMessage>{t("There is no project with this name")}</ErrorMessage>
-          )}
-        </div>
-      </div>
-    </>
+    <Box>
+      <Box
+        gap={2}
+        marginBottom={5}
+        flexWrap="wrap"
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Typography variant="h5" sx={{ fontWeight: 800 }}>
+          {t("Some of my recent works")}
+        </Typography>
+        <TextFieldCompnent
+          sx={{ maxWidth: 400, width: "100%" }}
+          type="text"
+          label={t("Search")}
+          change={handleInputChange}
+          value={search}
+          name="search"
+        />
+      </Box>
+      <Grid container spacing={4} justifyContent="center" alignItems="center">
+        {reversedResults.length > 0 ? (
+          reversedResults.map((project) => (
+            <ProjectDiv
+              project={project}
+              key={project.id}
+            />
+          ))
+        ) : (
+          <ErrorMessage>{t("There is no project with this name")}</ErrorMessage>
+        )}
+      </Grid>
+    </Box>
   );
 };
 
