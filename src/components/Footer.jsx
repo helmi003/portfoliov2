@@ -23,6 +23,9 @@ const Footer = () => {
         backgroundColor: theme.palette.dark.main,
         padding: 2,
         textAlign: "center",
+        [theme.breakpoints.down("sm")]: {
+          bottom: "-160px",
+        },
       }}
     >
       <Box
@@ -36,27 +39,27 @@ const Footer = () => {
           href="https://www.facebook.com/helmi.benromdhane.9"
           color="inherit"
         >
-          <FacebookIcon fontSize="large" />
+          <FacebookIcon fontSize="small" />
         </IconButton>
         <IconButton href="https://twitter.com/HelmiBenRomdha8" color="inherit">
-          <TwitterIcon fontSize="large" />
+          <TwitterIcon fontSize="small" />
         </IconButton>
         <IconButton href="https://github.com/helmi003" color="inherit">
-          <GitHubIcon fontSize="large" />
+          <GitHubIcon fontSize="small" />
         </IconButton>
         <IconButton
           href="https://www.linkedin.com/in/helmi-ben-romdhane/"
           color="inherit"
         >
-          <LinkedInIcon fontSize="large" />
+          <LinkedInIcon fontSize="small" />
         </IconButton>
         <IconButton href="https://www.instagram.com/helmi_b.r/" color="inherit">
-          <InstagramIcon fontSize="large" />
+          <InstagramIcon fontSize="small" />
         </IconButton>
       </Box>
       <Typography
         variant="body2"
-        sx={{ fontWeight: 500, color: "white", mt: 2 }}
+        sx={{ fontWeight: 500, color: "white" }}
       >
         <Typography component="span">
           {t("All rights reserved")} © 2022 .{" "}

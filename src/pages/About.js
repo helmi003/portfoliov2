@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import classes from "../components/Layout/Layout.module.scss";
+import cookies from "js-cookie";
+import LinkIcon from "@mui/icons-material/Link";
 
 const About = () => {
   const { t } = useTranslation();
+  const lang = cookies.get("i18next") || "en";
   const theme = useTheme();
   const educationData = [
     { label: t("School"), values: ["Dar Chaaben El Fehri"] },
@@ -68,6 +71,32 @@ const About = () => {
       location: "Nabeul",
       role: t("Developer"),
       link: "/Portfolio/20",
+    },
+  ];
+  const certificates = [
+    {
+      title:
+        "Certificate Honoris Sustainability, Work Ethics and Gender Equity",
+      titleFR:
+        "Certificat Honoris en Développement Durable, Éthique de Travail et Égalité des Genres",
+      link: "https://certificate.bcdiploma.com/check/E3F1531EE1B7D9AD430E9D68CF4219FED89CA08C0A8749AE97BF6F055D83F15CelBIZVh2LytzM0dlK2VZQmZEbG1VSmEyVk5RWXdCdnR2Y0tSU0c5Z3grSzZkdVVN",
+      date: "Issued Sep 2024",
+      dateFR: "Émis Sep 2024",
+    },
+    {
+      title: "Honoris Sustainability, Work Ethics & Gender Equity Certificate",
+      titleFR:
+        "Certificat Honoris en Développement Durable, Éthique de Travail et Égalité des Genres",
+      link: "https://certificate.bcdiploma.com/check/D5F8EBA69A750A75C0A153EBE031AF998194BB2BF70A45CC1F8683FE3776811FR0pFa0FaNEwrVzdTRUh2WEF0UFNFck5HZjd1Zkpta1NDa082cFNZYjhZaHV5eVhr",
+      date: "Issued Jan 2024",
+      dateFR: "Émis Jan 2024",
+    },
+    {
+      title: "AWS Academy Graduate - AWS Academy Cloud Foundations",
+      titleFR: "Diplôme de l'Académie AWS - Fondations Cloud de l'Académie AWS",
+      link: "https://www.credly.com/badges/75da565a-06b7-4b54-9024-051c40f18e28/linked_in_profile",
+      date: "Issued Jan 2023",
+      dateFR: "Émis Jan 2023",
     },
   ];
   return (
@@ -221,6 +250,35 @@ const About = () => {
               }}
             >
               <ArrowForwardIcon fontSize="small" /> {t("Read more")}
+            </Link>
+          </Box>
+        ))}
+      </Box>
+      <Box className={classes.block} sx={{ mt: 4 }}>
+        <Typography gutterBottom variant="h4" sx={{ fontWeight: 800 }}>
+          {t("Certificates")}
+        </Typography>
+        {certificates.map((item, index) => (
+          <Box
+            key={index}
+            sx={{
+              mb: 1,
+              ml: 4,
+            }}
+          >
+            <Link
+              to={item.link}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                color: theme.palette.primary.main,
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              <LinkIcon fontSize="small" sx={{ mr: 1 }} />
+              {lang === "en" ? item.title : item.titleFR}
             </Link>
           </Box>
         ))}

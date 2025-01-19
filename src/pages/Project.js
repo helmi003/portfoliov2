@@ -94,7 +94,15 @@ export default function Project() {
           const isDemo = text === "DEMO";
           const variant = isDemo ? "contained" : "outlined";
           const buttonComponent = (
-            <ButtonComponent variant={variant} text={text} loading={false} />
+            <ButtonComponent
+              variant={variant}
+              text={text}
+              loading={false}
+              moreStyles={{
+                cursor: link ? "pointer" : "not-allowed",
+              }}
+              disabled={!link}
+            />
           );
           return link ? (
             <a href={link} key={text}>

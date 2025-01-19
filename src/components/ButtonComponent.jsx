@@ -2,6 +2,7 @@ import { alpha, Box, Button, CircularProgress, useTheme } from "@mui/material";
 import React from "react";
 
 const ButtonComponent = ({
+  moreStyles,
   text,
   loading,
   variant = "contained",
@@ -10,6 +11,7 @@ const ButtonComponent = ({
   const theme = useTheme();
 
   const buttonStyles = {
+    ...moreStyles,
     width: "100%",
     padding: "0.75rem 1.25rem",
     backgroundColor: !loading

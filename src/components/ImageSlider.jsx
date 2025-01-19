@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, IconButton, useTheme } from "@mui/material";
+import { Box, IconButton, useMediaQuery, useTheme } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import handleFullscreen from "../global/globalFunctions";
@@ -7,6 +7,7 @@ import handleFullscreen from "../global/globalFunctions";
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -45,7 +46,11 @@ const ImageSlider = ({ slides }) => {
         <img
           alt={currentIndex}
           loading="lazy"
-          style={{ cursor: "pointer", maxHeight: "400px" }}
+          style={{
+            cursor: "pointer",
+            maxHeight: "400px",
+            maxWidth: isSmallScreen ? "200px" : "100%",
+          }}
           onClick={() => handleFullscreen(slides[currentIndex], "image")}
           src={slides[currentIndex]}
         />

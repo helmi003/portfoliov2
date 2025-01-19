@@ -1,18 +1,24 @@
 import image1 from "./image1.jpg";
-import image2 from "./image2.png";
-import image3 from "./image3.jpeg";
-import image4 from "./image4.jpg";
+import image2 from "./image2.jpg";
+import image3 from "./image3.jpg";
+import image4 from "./image4.png";
 import image5 from "./image5.jpeg";
 import image6 from "./image6.jpg";
-import image7 from "./image7.jpg";
+import image7 from "./image7.jpeg";
 import image8 from "./image8.jpg";
 import image9 from "./image9.jpg";
 import image10 from "./image10.jpg";
-import image11 from "./image11.jpeg";
+import image11 from "./image11.jpg";
+import image12 from "./image12.jpg";
+import image13 from "./image13.jpg";
+import image14 from "./image14.jpg";
+import image15 from "./image15.jpg";
+import image16 from "./image16.jpeg";
+import image17 from "./image17.jpg";
+import image18 from "./image18.jpg";
 const video1 = require("./video1.mp4");
 const video2 = require("./video2.mp4");
 const video3 = require("./video3.mp4");
-
 
 const media = [
   {
@@ -28,15 +34,37 @@ const media = [
   {
     id: 1,
     type: "image",
+    placeDate: "Nabeul - 2019",
+    title: "Baccalaureate",
+    titleFR: "Baccalauréat",
+    description: "The last day of the Baccalaureate party",
+    descriptionFR: "Le dernier jour de la fête du baccalauréat",
+    file: image2,
+  },
+  {
+    id: 2,
+    type: "image",
+    placeDate: "Dar Chaâbane - 2019",
+    title: "Volunteer Work",
+    titleFR: "Travail Bénévole",
+    description:
+      "Volunteering at Dar Chaâbane club to design on rocks and make the place cleaner and more lively",
+    descriptionFR:
+      "Bénévolat au club de Dar Chaâbane pour peindre des rochers et rendre l'endroit plus propre et accueillant",
+    file: image3,
+  },
+  {
+    id: 3,
+    type: "image",
     placeDate: "Sousse - 2019",
     title: "Hackathon",
     titleFR: "Hackathon",
     description: "My first hackathon with new friends and teammates",
     descriptionFR: "Mon premier hackathon avec de nouveaux amis et coéquipiers",
-    file: image2,
+    file: image4,
   },
   {
-    id: 2,
+    id: 4,
     type: "image",
     placeDate: "Sousse - 2019",
     title: "Hackathon",
@@ -45,10 +73,10 @@ const media = [
       "Exhausted after the hackathon, just wanting to sleep (me and my friends)",
     descriptionFR:
       "Épuisé après le hackathon, juste envie de dormir (moi et mes amis)",
-    file: image3,
+    file: image5,
   },
   {
-    id: 3,
+    id: 5,
     type: "image",
     placeDate: "Nabeul -2020",
     title: "Internship",
@@ -56,30 +84,40 @@ const media = [
     description: "My first internship at Neopolis with my roommate and mentor",
     descriptionFR:
       "Mon premier stage chez Neopolis avec mon colocataire et mon mentor",
-    file: image4,
+    file: image6,
   },
   {
-    id: 4,
+    id: 6,
     type: "image",
     placeDate: "Sousse -2022",
     title: "Last day",
     titleFR: "Dernier jour",
     description: "Last day at university before graduation",
     descriptionFR: "Dernier jour à l'université avant la remise des diplômes",
-    file: image5,
+    file: image7,
   },
   {
-    id: 5,
+    id: 7,
+    type: "image",
+    placeDate: "Nabeul - 2022",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description: "My partner's graduation",
+    descriptionFR: "La remise des diplômes de mon partenaire",
+    file: image8,
+  },
+  {
+    id: 8,
     type: "image",
     placeDate: "Sousse -2022",
     title: "Graduation",
     titleFR: "Graduationr",
     description: "Discussing with the jury during my end-of-study internship",
     descriptionFR: "Discussion avec le jury lors de mon stage de fin d'études",
-    file: image6,
+    file: image9,
   },
   {
-    id: 6,
+    id: 9,
     type: "video",
     placeDate: "Sousse -2022",
     title: "Graduation",
@@ -89,17 +127,17 @@ const media = [
     file: video1,
   },
   {
-    id: 7,
+    id: 10,
     type: "image",
     placeDate: "Sousse -2022",
     title: "Graduation",
     titleFR: "Graduationr",
     description: "Me and my colleague after excelling with distinction",
     descriptionFR: "Moi et mon collègue après avoir excellé avec distinction",
-    file: image7,
+    file: image10,
   },
   {
-    id: 8,
+    id: 11,
     type: "image",
     placeDate: "Sousse -2022",
     title: "Graduation",
@@ -107,30 +145,30 @@ const media = [
     description: "Me and my classmates during graduation",
     descriptionFR:
       "Moi et mes camarades de classe lors de la remise des diplômes",
-    file: image8,
+    file: image11,
   },
   {
-    id: 9,
+    id: 12,
     type: "image",
     placeDate: "Sousse -2022",
     title: "Graduation",
     titleFR: "Graduationr",
     description: "Another moment with my classmates",
     descriptionFR: "Un autre moment avec mes camarades de classe",
-    file: image9,
+    file: image12,
   },
   {
-    id: 10,
+    id: 13,
     type: "image",
     placeDate: "Sousse -2022",
     title: "Graduation",
     titleFR: "Graduationr",
     description: "With friends who made university life memorable",
     descriptionFR: "Avec des amis qui ont rendu la vie universitaire mémorable",
-    file: image10,
+    file: image13,
   },
   {
-    id: 11,
+    id: 14,
     type: "video",
     placeDate: "Sousse -2022",
     title: "Graduation",
@@ -142,7 +180,31 @@ const media = [
     file: video2,
   },
   {
-    id: 12,
+    id: 15,
+    type: "image",
+    placeDate: "Nabeul - 2022",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description:
+      "Me and my partner on my graduation. She was and still is my biggest supporter.",
+    descriptionFR:
+      "Moi et ma partenaire lors de ma remise de diplôme. Elle était et reste mon plus grand soutien.",
+    file: image14,
+  },
+  {
+    id: 16,
+    type: "image",
+    placeDate: "Nabeul - 2022",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description:
+      "Me and my family, who was always by my side and never let me down.",
+    descriptionFR:
+      "Moi et ma famille, qui a toujours été à mes côtés et ne m'a jamais laissé tomber.",
+    file: image15,
+  },
+  {
+    id: 17,
     type: "image",
     placeDate: "Tunis -2024",
     title: "Semi-finals",
@@ -151,10 +213,34 @@ const media = [
       "Celebrating our success in reaching the semi-finals of the integration project",
     descriptionFR:
       "Célébrant notre succès pour avoir atteint les demi-finales du projet d'intégration",
-    file: image11,
+    file: image16,
   },
   {
-    id: 13,
+    id: 18,
+    type: "image",
+    placeDate: "Tunis - 2024",
+    title: "Project Presentation",
+    titleFR: "Présentation du Projet",
+    description:
+      "Me and my partner during the day of the presentation of our integration project.",
+    descriptionFR:
+      "Moi et ma partenaire lors de la journée de présentation de notre projet d'intégration.",
+    file: image17,
+  },
+  {
+    id: 19,
+    type: "image",
+    placeDate: "Tunis - 2024",
+    title: "Teamwork Celebration",
+    titleFR: "Célébration d'Équipe",
+    description:
+      "Me and my friends celebrating our hard work and teamwork during the integration project.",
+    descriptionFR:
+      "Moi et mes amis célébrant notre travail acharné et notre esprit d'équipe lors du projet d'intégration.",
+    file: image18,
+  },
+  {
+    id: 20,
     type: "video",
     placeDate: "Tunis -2024",
     title: "Semi-finals",

@@ -87,7 +87,7 @@ const Header = () => {
                   href={item.external ? item.path : undefined}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noreferrer" : undefined}
-                  onClick={item.onClick} // Handle the onClick for Resume
+                  onClick={item.onClick}
                   sx={{
                     backgroundColor: isActive
                       ? theme.palette.primary.main
@@ -134,6 +134,7 @@ const Header = () => {
                         href={item.external ? item.path : undefined}
                         target={item.external ? "_blank" : undefined}
                         rel={item.external ? "noreferrer" : undefined}
+                        onClick={item.onClick}
                         sx={{
                           fontWeight: 600,
                           backgroundColor: isActive
@@ -215,6 +216,11 @@ const Header = () => {
             gap: 5,
             backgroundColor: theme.palette.dark.main,
             paddingY: 4,
+            [theme.breakpoints.down("sm")]: {
+              minWidth: 200,
+              display: "block",
+              paddingY: 0,
+            },
           }}
         >
           <Button
