@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables" as *;
 
 .container {
   position: relative;
@@ -7,7 +7,8 @@
   transition: 0.3s ease all;
   margin-bottom: 50px;
   margin-top: 50px;
-  
+  animation: appear 1s ease-out;
+
   @include breakpoint(md) {
     padding: 0 3rem;
   }
@@ -21,19 +22,17 @@
   @keyframes appear {
     from {
       opacity: 0;
-      scale: 0.5;
+      transform: scale(0.5);
     }
     to {
       opacity: 1;
-      scale: 1;
+      transform: scale(1);
     }
   }
-
-  animation: appear 1s ease-out;
 }
 
 .block {
-  animation: appear linear;
+  animation: appear 1s ease-out;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }

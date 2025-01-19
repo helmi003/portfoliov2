@@ -32,7 +32,8 @@
     "react-spinners": "^0.13.8",
     "react-toastify": "^10.0.5",
     "resolve-url-loader": "^5.0.0",
-    "sass": "^1.77.4",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
     "web-vitals": "^2.1.4",
     "yup": "^1.6.1"
   },
@@ -59,5 +60,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

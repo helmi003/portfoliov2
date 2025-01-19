@@ -29,28 +29,26 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <>
-      <Box sx={{ position: "relative", minHeight: "85vh" }}>
-        <Header />
-        <Box className={classes.container}>{children}</Box>
-        {init && (
-          <Particles
-            id="tsparticles"
-            options={ParticlesFile}
-            particlesLoaded={particlesLoaded}
-            style={{
-              position: "absolute",
-              width: "100%",
-              height: "calc(100vh - 100px)",
-              top: "100px",
-              left: 0,
-              zIndex: -1,
-            }}
-          />
-        )}
-        <Footer />
-      </Box>
-    </>
+    <Box sx={{ position: "relative", minHeight: "85vh" }}>
+      <Header />
+      <Box className={classes.container}>{children}</Box>
+      {init && (
+        <Particles
+          id="tsparticles"
+          options={ParticlesFile}
+          particlesLoaded={particlesLoaded}
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "calc(100vh - 100px)",
+            top: "100px",
+            left: 0,
+            zIndex: -1,
+          }}
+        />
+      )}
+      <Footer />
+    </Box>
   );
 };
 
