@@ -16,6 +16,13 @@ import image15 from "./image15.jpg";
 import image16 from "./image16.jpeg";
 import image17 from "./image17.jpg";
 import image18 from "./image18.jpg";
+import image19 from "./image19.jpeg";
+import image20 from "./image20.jpeg";
+import image21 from "./image21.jpeg";
+import image22 from "./image22.jpeg";
+import image23 from "./image23.jpeg";
+import image24 from "./image24.jpeg";
+import image25 from "./image25.jpeg";
 const video1 = require("./video1.mp4");
 const video2 = require("./video2.mp4");
 const video3 = require("./video3.mp4");
@@ -249,6 +256,76 @@ const media = [
     descriptionFR: "Présentation lors de l'événement des demi-finales",
     file: video3,
   },
+  {
+    id: 21,
+    type: "image",
+    placeDate: "Tunis - 2025",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description: "A memorable moment in my suit right after the graduation ceremony.",
+    descriptionFR: "Un moment mémorable dans mon costume juste après la cérémonie de remise de diplôme.",
+    file: image19,
+  },
+  {
+    id: 22,
+    type: "image",
+    placeDate: "Tunis - 2025",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description: "Wearing my graduation cap and gown — an unforgettable feeling of achievement.",
+    descriptionFR: "Portant ma toge et mon chapeau de remise de diplôme — un sentiment inoubliable d’accomplissement.",
+    file: image20,
+  },
+  {
+    id: 23,
+    type: "image",
+    placeDate: "Tunis - 2025",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description: "A joyful photo with my partner — both of us graduated on the same day and hour.",
+    descriptionFR: "Une photo joyeuse avec ma partenaire — nous avons tous deux été diplômés le même jour et à la même heure.",
+    file: image21,
+  },
+  {
+    id: 24,
+    type: "image",
+    placeDate: "Tunis - 2025",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description: "Together again, this time proudly wearing our graduation gowns and caps.",
+    descriptionFR: "À nouveau ensemble, cette fois fièrement vêtus de nos toges et chapeaux de diplômés.",
+    file: image22,
+  },
+  {
+    id: 25,
+    type: "image",
+    placeDate: "Tunis - 2025",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description: "A special picture with my parents and her — a beautiful family moment of pride and joy.",
+    descriptionFR: "Une photo spéciale avec mes parents et elle — un beau moment de fierté et de joie en famille.",
+    file: image23,
+  },
+  {
+    id: 26,
+    type: "image",
+    placeDate: "Tunis - 2025",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description: "With my parents and my two aunts — sharing the happiness of this great milestone together.",
+    descriptionFR: "Avec mes parents et mes deux tantes — partageant ensemble le bonheur de cette grande étape.",
+    file: image24,
+  },
+  {
+    id: 27,
+    type: "image",
+    placeDate: "Tunis - 2025",
+    title: "Graduation",
+    titleFR: "Remise de Diplôme",
+    description: "Surrounded by my parents, aunts, and all my friends who came to support me on my big day.",
+    descriptionFR: "Entouré de mes parents, de mes tantes et de tous mes amis venus me soutenir lors de ce grand jour.",
+    file: image25,
+  }
 ];
 
 export default media;

@@ -146,7 +146,7 @@ const About = () => {
           <img
             src={profile}
             alt="Profile_picture"
-            style={{ borderRadius: "50%", height: "400px" }}
+            style={{ height: "400px" }}
           />
         </Box>
       </Box>
