@@ -12,7 +12,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import ButtonComponent from "../components/ButtonComponent";
 
 const Contact = () => {
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
   const theme = useTheme();
@@ -69,14 +69,17 @@ const Contact = () => {
     {
       icon: <PhoneIcon fontSize="large" />,
       text: "+216 20 499 382",
+      link: "tel:+21620499382",
     },
     {
       icon: <MailIcon fontSize="large" />,
       text: "helmi.br1999@gmail.com",
+      link: "mailto:helmi.br1999@gmail.com",
     },
     {
       icon: <PlaceIcon fontSize="large" />,
       text: `Nabeul 8011, dar chaaben el fehri, ${t("Street monsof bey")}`,
+      link: "https://www.google.com/maps?q=Nabeul+8011+Dar+Chaaben+El+Fehri",
     },
   ];
 
@@ -143,7 +146,18 @@ const Contact = () => {
               >
                 {item.icon}
               </Box>
-              {item.text}
+              <a
+                href={item.link}
+                target={item.link.startsWith("http") ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                style={{
+                  color: theme.palette.light.main,
+                  textDecoration: "none",
+                  fontWeight: 500,
+                }}
+              >
+                {item.text}
+              </a>
             </Box>
           ))}
         </Box>
@@ -176,6 +190,7 @@ const Contact = () => {
                   flexDirection: "column",
                   gap: 2,
                   maxWidth: 400,
+                  minWidth: 300,
                   width: "100%",
                 }}
               >

@@ -15,6 +15,7 @@ const TextFieldCompnent = ({
 }) => {
   return (
     <TextField
+      fullWidth
       variant="outlined"
       type={type}
       label={label}

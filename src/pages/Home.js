@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../assets/images/helmi4.png";
+import profile from "../assets/images/cropped image.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ProjectDiv from "../components/ProjectDiv";

@@ -1,10 +1,9 @@
 import React from "react";
-import profile from "../assets/images/helmi2.png";
+import profile from "../assets/images/helmi.png";
 import { Box, Typography, Chip, useTheme, alpha } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import classes from "../components/Layout/Layout.module.scss";
 import cookies from "js-cookie";
 import LinkIcon from "@mui/icons-material/Link";
 
@@ -171,7 +170,7 @@ const About = () => {
           </Box>
         ))}
       </Box>
-      <Box className={classes.block} sx={{ mt: 4 }}>
+      <Box sx={{ mt: 4 }}>
         <Typography gutterBottom variant="h4" sx={{ fontWeight: 800 }}>
           {t("MY SKILLS")}
         </Typography>
@@ -204,7 +203,7 @@ const About = () => {
           </Box>
         ))}
       </Box>
-      <Box className={classes.block} sx={{ mt: 4 }}>
+      <Box sx={{ mt: 4 }}>
         <Typography gutterBottom variant="h4" sx={{ fontWeight: 800 }}>
           {t("EXPERIENCE")} : {t("Internships")}
         </Typography>
@@ -254,7 +253,7 @@ const About = () => {
           </Box>
         ))}
       </Box>
-      <Box className={classes.block} sx={{ mt: 4 }}>
+      <Box sx={{ mt: 4 }}>
         <Typography gutterBottom variant="h4" sx={{ fontWeight: 800 }}>
           {t("Certificates")}
         </Typography>
@@ -283,7 +282,7 @@ const About = () => {
           </Box>
         ))}
       </Box>
-      <Box className={classes.block} sx={{ mt: 4 }}>
+      <Box sx={{ mt: 4 }}>
         <Typography variant="h4" sx={{ fontWeight: 800 }}>
           {t("Currently")}
         </Typography>

@@ -16,12 +16,8 @@ const Layout = ({ children }) => {
       await loadSlim(engine);
       engine.load("tsparticles", ParticlesFile);
     })
-      .then(() => {
-        setInit(true);
-      })
-      .catch((err) => {
-        console.error("Particles initialization failed: ", err);
-      });
+      .then(() => setInit(true))
+      .catch((err) => console.error("Particles initialization failed:", err));
   }, []);
 
   const particlesLoaded = (container) => {
@@ -29,9 +25,26 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <Box sx={{ position: "relative", minHeight: "85vh" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       <Header />
-      <Box className={classes.container}>{children}</Box>
+      <Box
+        className={classes.container}
+        sx={{
+          flex: 1,
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
+        {children}
+      </Box>
       {init && (
         <Particles
           id="tsparticles"
@@ -39,11 +52,11 @@ const Layout = ({ children }) => {
           particlesLoaded={particlesLoaded}
           style={{
             position: "absolute",
+            inset: 0,
             width: "100%",
-            height: "calc(100vh - 100px)",
-            top: "100px",
-            left: 0,
-            zIndex: -1,
+            height: "100%",
+            zIndex: 0,
+            pointerEvents: "none",
           }}
         />
       )}

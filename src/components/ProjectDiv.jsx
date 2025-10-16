@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import cookies from "js-cookie";
-import { Box, Card, CardContent, CardMedia, Chip, Typography } from "@mui/material";
-import classes from "./Layout/Layout.module.scss";
+import {
+  Box,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Chip,
+  Typography,
+} from "@mui/material";
 
 function ProjectDiv({ project }) {
   const lang = cookies.get("i18next") || "en";
@@ -17,58 +24,96 @@ function ProjectDiv({ project }) {
       setImageAspectRatio(aspectRatio);
     };
   }, [project.screenshots]);
+
   return (
     <Card
-      className={classes.block}
+      sx={{
+        maxWidth: 400,
+        borderRadius: 4,
+        overflow: "hidden",
+        cursor: "pointer",
+        transition: "transform 0.35s ease, box-shadow 0.35s ease",
+        boxShadow: "0px 4px 10px rgba(0,0,0,0.15)",
+        "&:hover": {
+          transform: "translateY(-6px) scale(1.02)",
+          boxShadow: "0px 10px 25px rgba(0,0,0,0.25)",
+        },
+      }}
       onClick={() => navigate(`/Portfolio/${project.id}`)}
-      sx={{ maxWidth: 400, cursor: "pointer" }}
     >
-      <CardMedia
-        component="img"
-        sx={{
-          height: 140,
-          objectFit:
-            imageAspectRatio && imageAspectRatio > 1 ? "fill" : "contain",
-        }}
-        image={project.screenshots[0]}
-        title={project.title}
-      />
-      <CardContent>
-        <Typography sx={{ fontWeight: 600 }} variant="h5" component="div">
-          {project.title}
-        </Typography>
+      <CardActionArea>
         <Box
-          sx={{ mb: 1 }}
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <Typography>
-            {lang === "en" ? project.type : project.typeFR}
-          </Typography>
-          <Typography>
-            {lang === "en" ? project.place : project.placeFR}
-          </Typography>
-        </Box>
-        <Typography
-          variant="body2"
-          gutterBottom
           sx={{
-            color: "text.secondary",
-            display: "-webkit-box",
-            WebkitBoxOrient: "vertical",
+            position: "relative",
             overflow: "hidden",
-            WebkitLineClamp: 3,
-            textOverflow: "ellipsis",
           }}
         >
-          {lang === "en" ? project.about : project.aboutFR}
-        </Typography>
-        <Chip
-          color="success"
-          label={lang === "en" ? project.date : project.dateFR}
-        />
-      </CardContent>
+          <CardMedia
+            component="img"
+            sx={{
+              height: 200,
+              objectFit:
+                imageAspectRatio && imageAspectRatio > 1 ? "cover" : "contain",
+              transition: "transform 0.6s ease",
+              "&:hover": {
+                transform: "scale(1.08)",
+              },
+            }}
+            image={project.screenshots[0]}
+            title={project.title}
+          />
+        </Box>
+        <CardContent>
+          <Typography
+            sx={{
+              fontWeight: 700,
+              fontSize: "1.2rem",
+              mb: 1,
+              textTransform: "capitalize",
+            }}
+          >
+            {project.title}
+          </Typography>
+
+          <Box
+            sx={{ mb: 1 }}
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Typography variant="body2" color="text.secondary">
+              {lang === "en" ? project.type : project.typeFR}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {lang === "en" ? project.place : project.placeFR}
+            </Typography>
+          </Box>
+
+          <Typography
+            variant="body2"
+            sx={{
+              color: "text.secondary",
+              display: "-webkit-box",
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+              WebkitLineClamp: 3,
+              textOverflow: "ellipsis",
+              mb: 1,
+            }}
+          >
+            {lang === "en" ? project.about : project.aboutFR}
+          </Typography>
+
+          <Chip
+            color="default"
+            label={lang === "en" ? project.date : project.dateFR}
+            sx={{
+              fontWeight: 600,
+              borderRadius: "8px",
+            }}
+          />
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 }

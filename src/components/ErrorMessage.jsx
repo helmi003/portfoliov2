@@ -1,9 +1,13 @@
 import { Box, Typography } from "@mui/material";
-// import classes from "../Error/Error.module.scss";
 
 function ErrorMessage({ children }) {
   return (
-    <Box justifyContent="center" display="flex" >
+    <Box display="flex"
+      justifyContent="center"
+      alignItems="center"
+      height="60vh"
+      textAlign="center"
+    >
       <Typography variant="h6" sx={{ fontWeight: 800 }} color="error">
         {children}
       </Typography>

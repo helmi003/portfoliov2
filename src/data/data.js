@@ -213,7 +213,7 @@ const data = [
     id: 6,
     date: "February-June 2022",
     type: "Internship - MetaService",
-    place: "Remotely|Sousse",
+    place: "Remotely | Sousse",
     placeFR: "Télétravail|Sousse",
     title: "Grabit",
     subtitle:
@@ -289,7 +289,7 @@ const data = [
     id: 8,
     date: "December 2022",
     type: "Freelance",
-    place: "Remotely|France",
+    place: "Remotely | France",
     placeFR: "Télétravail|France",
     title: "Castflix",
     subtitle:
@@ -360,7 +360,7 @@ const data = [
     id: 10,
     date: "February-June 2023 / October-January 2025",
     type: "Freelance",
-    place: "Remotely|France",
+    place: "Remotely | France",
     placeFR: "Télétravail|France",
     title: "Tacos Korner app",
     subtitle:
@@ -397,7 +397,7 @@ const data = [
     id: 11,
     date: "February-June 2023 / October-January 2025",
     type: "Freelance",
-    place: "Remotely|France",
+    place: "Remotely | France",
     placeFR: "Télétravail|France",
     title: "Tacos Korner dashboard",
     subtitle:
@@ -474,7 +474,7 @@ const data = [
     id: 13,
     date: "December-April 2023",
     type: "Freelance",
-    place: "Remotely|Sousse",
+    place: "Remotely | Sousse",
     placeFR: "Télétravail|Sousse",
     title: "Hand rehab",
     subtitle:
@@ -515,7 +515,7 @@ const data = [
     id: 14,
     date: "October-February 2024",
     type: "Freelance",
-    place: "Remotely|Djerba",
+    place: "Remotely | Djerba",
     placeFR: "Télétravail|Djerba",
     title: "HFBatiment application",
     subtitle:
@@ -554,7 +554,7 @@ const data = [
     id: 15,
     date: "October-February 2024",
     type: "Freelance",
-    place: "Remotely|Djerba",
+    place: "Remotely | Djerba",
     placeFR: "Télétravail|Djerba",
     title: "HFBatiment dasboard",
     subtitle:
@@ -675,7 +675,7 @@ const data = [
     id: 18,
     date: "August-December 2024",
     type: "Freelance",
-    place: "Remotely|Monastir",
+    place: "Remotely | Monastir",
     placeFR: "Télétravail|Monastir",
     title: "TrueTech",
     subtitle:
@@ -719,7 +719,7 @@ const data = [
     id: 19,
     date: "August-December 2024",
     type: "Freelance",
-    place: "Remotely|Monastir",
+    place: "Remotely | Monastir",
     placeFR: "Télétravail|Monastir",
     title: "TrueTech Dashboard",
     subtitle:
