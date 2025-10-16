@@ -19,6 +19,7 @@ import images17 from "./bmp tunisie/images";
 import images18 from "./trutech/images";
 import images19 from "./truetech dashboard/images";
 import images20 from "./maggy/images";
+import images21 from "./winshot/images";
 
 const data = [
   {
@@ -49,7 +50,7 @@ const data = [
   {
     id: 1,
     date: "December 2019",
-    type: "Academic project",
+    type: "Academic project - ISET",
     place: "Sousse",
     placeFR: "Sousse",
     title: "Kids world",
@@ -58,7 +59,7 @@ const data = [
     about:
       "Since we were learning software development, we made the decision to create a website for our hackathon project utilizing various programming languages. The objective of the website was to offer a range of resources, including books, time management tools, and educational games.",
     dateFR: "Décembre 2019",
-    typeFR: "Projet académique",
+    typeFR: "Projet académique - ISET",
     subtitleFR:
       "En 2019, j'ai participé à un hackathon dans mon université(ISET Sousse) avec une équipe de quatre personnes. L'objectif du hackathon était de développer une (machine/jeu/application mobile/site web...) qui pourrait aider les parents à élever leurs enfants de manière plus efficace en seulement 12 heures. Cette initiative était motivée par l'influence considérable que la technologie exerce sur les enfants de nos jours.",
     aboutFR:
@@ -82,7 +83,7 @@ const data = [
   {
     id: 2,
     date: "September-December 2019",
-    type: "Academic project",
+    type: "Academic project - ISET",
     place: "Sousse",
     placeFR: "Sousse",
     title: "RipShark",
@@ -91,7 +92,7 @@ const data = [
     about:
       "My project involved developing a surf website that aimed to showcase surfing locations across Tunisia. The website included information about each surfing spot, categories, and clubs where people could join. Additionally, there was an admin page for managing the website's content, as well as an online store where visitors could purchase items such as clothing, accessories, and other related products.",
     dateFR: "Septembre-Décembre 2019",
-    typeFR: "Projet académique",
+    typeFR: "Projet académique - ISET",
     subtitleFR:
       "Ce site web a été développé dans le cadre de ma deuxième année au université pour un cours appelé 'Intégration de projet'. Conformément à la recommandation de notre professeur, chaque étudiant devait créer et développer un site web en fonction des sujets qu'il avait demandés.",
     aboutFR:
@@ -148,14 +149,14 @@ const data = [
   {
     id: 4,
     date: "Obtober-Decembre 2021",
-    type: "Academic project",
+    type: "Academic project - ISET",
     place: "Sousse",
     placeFR: "Sousse",
     title: "Learneur",
     subtitle:
       "Developing a mobile application during my third year in university was a new experience for me, especially since it was my first time working with the Flutter framework. I dedicated my efforts to create a functional and user-friendly mobile application, leveraging the capabilities provided by Flutter to build a cross-platform solution. This project allowed me to explore the world of mobile app development and apply my skills in a practical setting.",
     dateFR: "Obtobre-Décembre 2021",
-    typeFR: "Projet académique",
+    typeFR: "Projet académique - ISET",
     about:
       "The mobile application I developed during my third year of university was a course app that catered to both students and professors. As a professor, the app allowed me to add new courses, enabling students to stay updated with the latest information and announcements. On the other hand, as a student, I could access the app to view course details, including information about assignments, schedules, and other relevant materials. In addition to course-related features, the app also incorporated a real-time chat feature using Firebase. This chat functionality facilitated communication and collaboration among students and professors within the app, enhancing the overall learning experience.",
     aboutFR:
@@ -179,7 +180,7 @@ const data = [
   {
     id: 5,
     date: "Decembre 2021",
-    type: "Academic project",
+    type: "Academic project - ISET",
     place: "Sousse",
     placeFR: "Sousse",
     title: "Movie App",
@@ -188,7 +189,7 @@ const data = [
     about:
       "The app provides two user roles: client and seller/cinema owner. \nAs a client, users could log in to the app and browse through the available movies with the option to view movie details. Additionally, clients could make reservations for specific movie showtimes on their preferred dates.\nOn the other hand, the seller or cinema owner have access to additional functionalities. Add movies to the platform, including details like title, genre, duration, and showtimes. Also consult the reservations made by clients, review them, and confirm or manage them accordingly.",
     dateFR: "Décembre 2021",
-    typeFR: "Projet académique",
+    typeFR: "Projet académique - ISET",
     subtitleFR:
       "Cette deuxième application mobile a été développée pendant ma troisième année à l'université.",
     aboutFR:
@@ -290,7 +291,7 @@ const data = [
     date: "December 2022",
     type: "Freelance",
     place: "Remotely | France",
-    placeFR: "Télétravail|France",
+    placeFR: "Télétravail | France",
     title: "Castflix",
     subtitle:
       "During my master's degree, I undertook a freelance project to develop an application called 'Castflix.' This application is available for download on the Play Store.",
@@ -361,7 +362,7 @@ const data = [
     date: "February-June 2023 / October-January 2025",
     type: "Freelance",
     place: "Remotely | France",
-    placeFR: "Télétravail|France",
+    placeFR: "Télétravail | France",
     title: "Tacos Korner app",
     subtitle:
       "During my master's degree, I undertook a freelance project to develop an application called 'Tacos Korner'.",
@@ -398,7 +399,7 @@ const data = [
     date: "February-June 2023 / October-January 2025",
     type: "Freelance",
     place: "Remotely | France",
-    placeFR: "Télétravail|France",
+    placeFR: "Télétravail | France",
     title: "Tacos Korner dashboard",
     subtitle:
       "During my master's degree, I undertook a freelance project to develop a dashboard for the application 'Tacos Korner'.",
@@ -475,7 +476,7 @@ const data = [
     date: "December-April 2023",
     type: "Freelance",
     place: "Remotely | Sousse",
-    placeFR: "Télétravail|Sousse",
+    placeFR: "Télétravail | Sousse",
     title: "Hand rehab",
     subtitle:
       "During my engeenering studies, I undertook a freelance project to develop a mobile application called 'Hand rehab'.",
@@ -516,7 +517,7 @@ const data = [
     date: "October-February 2024",
     type: "Freelance",
     place: "Remotely | Djerba",
-    placeFR: "Télétravail|Djerba",
+    placeFR: "Télétravail | Djerba",
     title: "HFBatiment application",
     subtitle:
       "During my engeenering studies, I undertook a freelance project to develop a mobile application called 'HFBatiment'.",
@@ -555,7 +556,7 @@ const data = [
     date: "October-February 2024",
     type: "Freelance",
     place: "Remotely | Djerba",
-    placeFR: "Télétravail|Djerba",
+    placeFR: "Télétravail | Djerba",
     title: "HFBatiment dasboard",
     subtitle:
       "During my engeenering studies, I undertook a freelance project to develop a dashbord called 'HFBatiment'.",
@@ -676,7 +677,7 @@ const data = [
     date: "August-December 2024",
     type: "Freelance",
     place: "Remotely | Monastir",
-    placeFR: "Télétravail|Monastir",
+    placeFR: "Télétravail | Monastir",
     title: "TrueTech",
     subtitle:
       "Development of TrueTech, a mobile app for buying and repairing phones.",
@@ -720,7 +721,7 @@ const data = [
     date: "August-December 2024",
     type: "Freelance",
     place: "Remotely | Monastir",
-    placeFR: "Télétravail|Monastir",
+    placeFR: "Télétravail | Monastir",
     title: "TrueTech Dashboard",
     subtitle:
       "Development of a dashboard for managing products, invoices, and sales.",
@@ -798,5 +799,46 @@ const data = [
     screenshots: [...images20],
     showcase: ["", ""],
   },
+  {
+    id: 21,
+    date: "February–July 2025",
+    type: "Internship – Gofield",
+    place: "Tunis",
+    placeFR: "Tunis",
+    title: "Winshot",
+    subtitle:
+      "Development of an intelligent web and mobile streaming module within Winshot (a retail-focused platform).",
+    about:
+      "During my internship at Gofield, I contributed to the development of an advanced real-time streaming module integrated into Winshot, a digital platform dedicated to retail performance management. The project focused on enabling smooth and reliable video sessions between retailers, consultants, and clients, while enhancing interactivity and automation throughout the streaming lifecycle.",
+    dateFR: "Février–Juillet 2025",
+    typeFR: "Stage – Gofield",
+    subtitleFR:
+      "Développement d’un module intelligent de streaming web et mobile intégré à Winshot, une plateforme dédiée à la performance des enseignes de retail.",
+    aboutFR:
+      "Au cours de mon stage chez Gofield, j’ai participé au développement d’un module de streaming en temps réel avancé intégré à la plateforme Winshot, spécialisée dans la gestion de la performance des réseaux de magasins. Le projet visait à offrir une expérience de visioconférence fluide et interactive entre les enseignes, les consultants et les clients, tout en automatisant la gestion complète du cycle de vie des sessions.",
+    technologies: ["MERN Stack", "React Native", "Firebase", "AWS", "Flask", "GitLab"],
+    tasks: [
+      "Implemented multilingual support using i18n.",
+      "Integrated LiveKit for real-time video streaming and chat.",
+      "Automated attendee tracking and session lifecycle (start/end) using webhooks.",
+      "Automated recording and storage of sessions on AWS S3 via webhook triggers.",
+      "Enabled push notifications and calendar reminders to boost user engagement.",
+      "Built support for instant and recurring conference sessions.",
+      "Developed a feedback and survey system using RoBERTa sentiment analysis for insights.",
+      "Created a certificate generation and management module for participants."
+    ],
+    tasksFR: [
+      "Mise en place du support multilingue via i18n.",
+      "Intégration de LiveKit pour le streaming vidéo et la messagerie en temps réel.",
+      "Automatisation du suivi des participants et du cycle de vie des sessions (démarrage/fin) à l’aide de webhooks.",
+      "Automatisation de l’enregistrement et du stockage des sessions sur AWS S3 via déclencheurs webhook.",
+      "Activation des notifications push et des rappels calendrier pour renforcer l’engagement des utilisateurs.",
+      "Ajout de la gestion des sessions instantanées et récurrentes avec planification des conférences.",
+      "Développement d’un système de feedback et de sondage intégrant une analyse de sentiments avec RoBERTa.",
+      "Création d’un module de génération et de gestion des certificats pour les participants."
+    ],
+    screenshots: [...images21],
+    showcase: ["", ""],
+  }
 ];
 export default data;

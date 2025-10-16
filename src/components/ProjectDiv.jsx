@@ -10,8 +10,9 @@ import {
   Chip,
   Typography,
 } from "@mui/material";
+import ParagraphHighliter from "./ParagraphHighliter";
 
-function ProjectDiv({ project }) {
+function ProjectDiv({ project, search }) {
   const lang = cookies.get("i18next") || "en";
   const navigate = useNavigate();
   const [imageAspectRatio, setImageAspectRatio] = useState(null);
@@ -72,7 +73,10 @@ function ProjectDiv({ project }) {
               textTransform: "capitalize",
             }}
           >
-            {project.title}
+            <ParagraphHighliter
+              title={project.title}
+              search={search}
+            />
           </Typography>
 
           <Box
@@ -82,13 +86,18 @@ function ProjectDiv({ project }) {
             alignItems="center"
           >
             <Typography variant="body2" color="text.secondary">
-              {lang === "en" ? project.type : project.typeFR}
+              <ParagraphHighliter
+                title={lang === "en" ? project.type : project.typeFR}
+                search={search}
+              />
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {lang === "en" ? project.place : project.placeFR}
+              <ParagraphHighliter
+                title={lang === "en" ? project.place : project.placeFR}
+                search={search}
+              />
             </Typography>
           </Box>
-
           <Typography
             variant="body2"
             sx={{
@@ -101,12 +110,17 @@ function ProjectDiv({ project }) {
               mb: 1,
             }}
           >
-            {lang === "en" ? project.about : project.aboutFR}
+            <ParagraphHighliter
+              title={lang === "en" ? project.about : project.aboutFR}
+              search={search}
+            />
           </Typography>
-
           <Chip
             color="default"
-            label={lang === "en" ? project.date : project.dateFR}
+            label={<ParagraphHighliter
+              title={lang === "en" ? project.date : project.dateFR}
+              search={search}
+            />}
             sx={{
               fontWeight: 600,
               borderRadius: "8px",

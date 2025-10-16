@@ -44,19 +44,15 @@ const ImageSlider = ({ slides }) => {
       >
         {slides.map((slide, index) => {
           const offset = (index - currentIndex + slides.length) % slides.length;
-
-          // compute position effect
           let transform = "translateX(0) scale(1)";
           let opacity = 1;
           let zIndex = 2;
 
           if (offset === 1) {
-            // next image
             transform = "translateX(150px) scale(0.8)";
             opacity = 0.6;
             zIndex = 1;
           } else if (offset === slides.length - 1) {
-            // previous image
             transform = "translateX(-150px) scale(0.8)";
             opacity = 0.6;
             zIndex = 1;
@@ -64,7 +60,6 @@ const ImageSlider = ({ slides }) => {
             opacity = 0;
             zIndex = 0;
           }
-
           return (
             <Box
               key={index}
@@ -86,52 +81,60 @@ const ImageSlider = ({ slides }) => {
             />
           );
         })}
-
         <IconButton
           onClick={goToPrevious}
           sx={{
             position: "absolute",
-            left: 10,
+            left: { xs: 0, sm: 10 },
+            zIndex: 5,
             color: theme.palette.primary.main,
             backgroundColor: theme.palette.background.paper,
             "&:hover": { backgroundColor: theme.palette.primary.light },
+            transform: "translateY(-50%)",
+            top: "50%",
           }}
         >
           <ArrowBackIosNewIcon />
         </IconButton>
-
         <IconButton
           onClick={goToNext}
           sx={{
             position: "absolute",
-            right: 10,
+            right: { xs: 0, sm: 10 },
+            zIndex: 5,
             color: theme.palette.primary.main,
             backgroundColor: theme.palette.background.paper,
             "&:hover": { backgroundColor: theme.palette.primary.light },
+            transform: "translateY(-50%)",
+            top: "50%",
           }}
         >
           <ArrowForwardIosIcon />
         </IconButton>
       </Box>
-
       <Box display="flex" justifyContent="center" gap={1} mt={2}>
         {slides.map((_, i) => (
           <Box
             key={i}
+            onClick={() => setCurrentIndex(i)}
             sx={{
-              width: 10,
-              height: 10,
+              width: 12,
+              height: 12,
               borderRadius: "50%",
+              cursor: "pointer",
               backgroundColor:
                 i === currentIndex
                   ? theme.palette.primary.main
                   : theme.palette.grey[400],
-              transition: "background-color 0.3s",
+              transition: "background-color 0.3s, transform 0.2s",
+              "&:hover": {
+                transform: "scale(1.2)",
+                backgroundColor: theme.palette.primary.light,
+              },
             }}
           />
         ))}
       </Box>
-
       <FullscreenImageDialog
         open={open}
         handleClose={handleClose}

@@ -18,7 +18,7 @@ export default function Project() {
       <Typography variant="h5" sx={{ fontWeight: 800 }}>
         {project?.title}
       </Typography>
-      <Typography variant="body1">
+      <Typography variant="body1" sx={{ mt: 2 }}>
         {lang === "en" ? project?.subtitle : project?.subtitleFR}
       </Typography>
       <hr

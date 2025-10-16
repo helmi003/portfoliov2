@@ -85,7 +85,17 @@ const Home = () => {
             {t("Life Long Learner")}
           </Typography>
         </Box>
-        <img height={350} src={profile} alt="Profile_picture" />
+        <Box
+          component="img"
+          src={profile}
+          alt="Profile_picture"
+          height={350}
+          sx={{
+            display: "block",
+            mx: { xs: "auto", sm: 0 },
+            mt: { xs: 3, sm: 0 },
+          }}
+        />
       </Box>
       <Box>
         <Typography variant="h5" sx={{ fontWeight: 800 }}>

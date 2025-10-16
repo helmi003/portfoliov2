@@ -73,7 +73,7 @@ const Header = () => {
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <MuiLink component={Link} to="/">
-          <Box component="img" src={logo} alt="Logo" height={64} />
+          <Box component="img" src={logo} alt="Logo" height={70} />
         </MuiLink>
         {isDesktop ? (
           <Box display="flex" alignItems="center" gap={2}>
@@ -89,6 +89,7 @@ const Header = () => {
                   rel={item.external ? "noreferrer" : undefined}
                   onClick={item.onClick}
                   sx={{
+                    fontWeight: 800,
                     backgroundColor: isActive
                       ? theme.palette.primary.main
                       : "transparent",
@@ -136,7 +137,7 @@ const Header = () => {
                         rel={item.external ? "noreferrer" : undefined}
                         onClick={item.onClick}
                         sx={{
-                          fontWeight: 600,
+                          fontWeight: 800,
                           backgroundColor: isActive
                             ? theme.palette.primary.main
                             : "transparent",
@@ -160,6 +161,7 @@ const Header = () => {
         <Box ml={2}>
           <Button
             variant="text"
+            color="inherit"
             onClick={(e) => setAnchorEl(e.currentTarget)}
             startIcon={
               Flags[currentLanguageCode === "fr" ? "FR" : "GB"] &&
@@ -184,6 +186,7 @@ const Header = () => {
                   handleLanguageChange(code);
                   setAnchorEl(null);
                 }}
+                sx={{ fontWeight: 600 }}
               >
                 <Box display="flex" alignItems="center" gap={1}>
                   {Flags[currentLanguageCode === "fr" ? "FR" : "GB"] &&
@@ -191,7 +194,7 @@ const Header = () => {
                       width: 24,
                       height: 16,
                     })}
-                  <Typography variant="body2">{name}</Typography>
+                  <Typography variant="inherit">{name}</Typography>
                 </Box>
               </MenuItem>
             ))}

@@ -48,28 +48,34 @@ const About = () => {
   ];
   const experiences = [
     {
-      company: "Neopolis",
+      company: "2020-Neopolis",
       location: "Nabeul",
       role: t("Developer"),
       link: "/Portfolio/0",
     },
     {
-      company: "AfterCode",
+      company: "2021-AfterCode",
       location: "Nabeul",
       role: t("Developer"),
       link: "/Portfolio/3",
     },
     {
-      company: "Meta Service",
+      company: "2022-Meta Service",
       location: "Sousse",
       role: t("Developer"),
       link: "/Portfolio/6",
     },
     {
-      company: "ShopMyInfluence",
+      company: "2024-ShopMyInfluence",
       location: "Nabeul",
       role: t("Developer"),
       link: "/Portfolio/20",
+    },
+    {
+      company: "2025-Gofield",
+      location: "Tunis",
+      role: t("Developer"),
+      link: "/Portfolio/21",
     },
   ];
   const certificates = [
