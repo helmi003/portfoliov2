@@ -186,19 +186,44 @@ const Home = () => {
         <br />
         <Typography
           variant="h6"
-          sx={{ fontWeight: 800 }}
-          textAlign="center"
-          alignItems="center"
+          sx={{
+            fontWeight: 800,
+            textAlign: "center",
+            alignItems: "center"
+          }}
         >
-          <Link
+          <Box
+            component={Link}
             to="/Portfolio"
-            style={{
-              color: theme.palette.primary.main,
+            sx={{
+              color: "secondary.main",
               textDecoration: "none",
+              position: "relative",
+              padding: "4px 0",
+              transition: "color 0.3s ease",
+              display: "inline-block",
+              '&::after': {
+                content: '""',
+                position: "absolute",
+                width: 0,
+                height: 3,
+                bottom: 0,
+                left: "50%",
+                backgroundColor: "primary.main",
+                transition: "all 0.3s ease",
+                transform: "translateX(-50%)",
+              },
+              '&:hover': {
+                color: "primary.main",
+                '&::after': {
+                  width: "100%",
+                  height: 4,
+                }
+              }
             }}
           >
             {t("View more projects")}
-          </Link>
+          </Box>
         </Typography>
       </Box>
     </Box>
