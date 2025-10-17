@@ -60,12 +60,12 @@ const ImageSlider = ({ slides }) => {
             opacity = 0;
             zIndex = 0;
           }
+
+          const isVideo = slide.endsWith(".mp4");
+
           return (
             <Box
               key={index}
-              component="img"
-              src={slide}
-              onClick={() => handleOpen({ type: "image", file: slide })}
               sx={{
                 position: "absolute",
                 height: isSmallScreen ? 200 : 350,
@@ -73,14 +73,47 @@ const ImageSlider = ({ slides }) => {
                 borderRadius: 3,
                 boxShadow: 6,
                 cursor: "pointer",
+                overflow: "hidden",
                 transition: "all 0.8s ease",
                 transform,
                 opacity,
                 zIndex,
               }}
-            />
+              onClick={() =>
+                handleOpen({ type: isVideo ? "video" : "image", file: slide })
+              }
+            >
+              {isVideo ? (
+                <video
+                  src={slide}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    objectFit: "cover",
+                    borderRadius: "inherit",
+                  }}
+                />
+              ) : (
+                <img
+                  src={slide}
+                  alt={`slide-${index}`}
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    objectFit: "cover",
+                    borderRadius: "inherit",
+                  }}
+                />
+              )}
+            </Box>
           );
         })}
+
+        {/* Navigation Arrows */}
         <IconButton
           onClick={goToPrevious}
           sx={{
@@ -112,6 +145,8 @@ const ImageSlider = ({ slides }) => {
           <ArrowForwardIosIcon />
         </IconButton>
       </Box>
+
+      {/* Dots Navigation */}
       <Box display="flex" justifyContent="center" gap={1} mt={2}>
         {slides.map((_, i) => (
           <Box
@@ -135,6 +170,7 @@ const ImageSlider = ({ slides }) => {
           />
         ))}
       </Box>
+
       <FullscreenImageDialog
         open={open}
         handleClose={handleClose}

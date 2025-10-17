@@ -20,6 +20,7 @@ import images18 from "./trutech/images";
 import images19 from "./truetech dashboard/images";
 import images20 from "./maggy/images";
 import images21 from "./winshot/images";
+import images22 from "./tacos korner cashier app/images";
 
 const data = [
   {
@@ -359,73 +360,80 @@ const data = [
   },
   {
     id: 10,
-    date: "February-June 2023 / October-January 2025",
-    type: "Freelance",
+    date: "February 2023 -> Today",
+    type: "LayaFood - Freelance",
     place: "Remotely | France",
     placeFR: "Télétravail | France",
     title: "Tacos Korner app",
     subtitle:
       "During my master's degree, I undertook a freelance project to develop an application called 'Tacos Korner'.",
-    dateFR: "Février-juin 2023 / octobre-janvier 2025",
-    typeFR: "Freelance",
+    dateFR: "Février 2023 -> Aujourd'hui",
+    typeFR: "LayaFood - Freelance",
     about:
-      "Tacos Korner is a restaurant ordering kiosk that offers users a wide range of food categories to choose from. The utilization of restaurant ordering kiosks has become increasingly popular in the industry, as it eliminates issues arising from inaccurately taken orders. By using the ordering kiosk, customers have complete control in selecting the products they desire without any difficulties. After making their selections, they proceed to the cashier to pay the bill. This streamlined process enhances the overall dining experience, reducing errors and ensuring customer satisfaction at Tacos Korner.",
+      "Tacos Korner is a self-service restaurant ordering kiosk designed to streamline the customer experience and enhance operational efficiency. The system allows users to browse a wide range of food categories, customize their orders, and complete transactions seamlessly. By digitizing the ordering process, the app eliminates errors caused by manual order-taking and significantly improves customer satisfaction. \n\nCurrently, the kiosk solution is deployed and in active use across multiple restaurants in France (4+ locations), demonstrating its scalability and real-world reliability. The platform also includes multi-restaurant management and supports NFC-based online payments through PayWish Market Pay.",
     subtitleFR:
       "Pendant ma maîtrise, j'ai entrepris un projet en freelance pour développer une application appelée 'Tacos Korner'.",
     aboutFR:
-      "Tacos Korner est une borne de commande de restaurant qui propose aux utilisateurs un large choix de catégories de plats. L'utilisation des bornes de commande de restaurant est de plus en plus populaire dans l'industrie, car elle élimine les problèmes liés aux commandes mal prises. En utilisant la borne de commande, les clients ont un contrôle total pour sélectionner les produits qu'ils désirent sans difficulté. Après avoir fait leurs choix, ils se dirigent vers la caisse pour régler la facture. Ce processus simplifié améliore l'expérience globale des clients, réduit les erreurs et garantit leur satisfaction chez Tacos Korner.",
-    technologies: ["Fluter", "MongoDB", "Node-JS"],
+      "Tacos Korner est une borne de commande autonome conçue pour optimiser l’expérience client et améliorer l’efficacité opérationnelle des restaurants. L’application permet aux utilisateurs de parcourir une large gamme de catégories de plats, de personnaliser leurs commandes et d’effectuer leurs achats en toute simplicité.\nEn digitalisant le processus de commande, elle élimine les erreurs liées à la prise de commande manuelle et garantit une meilleure satisfaction client.\n\nLa solution est actuellement déployée et utilisée dans plusieurs restaurants en France (plus de 4 établissements), démontrant sa fiabilité et sa capacité à s’adapter à différents environnements. Elle intègre également une gestion multi-restaurants et prend en charge les paiements en ligne via NFC grâce à PayWish Market Pay.",
+    technologies: ["Fluter", "MongoDB", "Node-JS", "Epson m30 series", "Rest-API", "Figma"],
     tasks: [
-      "Designing the app and preparing the project requirements document.",
-      "Creating user interfaces.",
-      "Consuming APIs.",
-      "Implementing authentication management.",
-      "Integrating the star printer to print tickets for orders and reservations.",
-      "Implementing the product selection process, including ingredient selection, customization, and order finalization.",
+      "Designed the UI/UX and prepared the project requirements documentation.",
+      "Developed responsive user interfaces and integrated RESTful APIs.",
+      "Implemented authentication and session management for secure user access.",
+      "Integrated Epson m30 series Printer for real-time ticket printing of orders and reservations.",
+      "Implemented functionality to send order tickets via email for customer convenience.",
+      "Developed the product selection and customization flow, enabling ingredient selection and order finalization.",
+      "Contributed to the deployment and maintenance of the app in production environments for multiple restaurants."
     ],
     tasksFR: [
-      "Conception de l'application et préparation du document des exigences du projet.",
-      "Création des interfaces utilisateur.",
-      "Consommation des API.",
-      "Mise en œuvre de la gestion de l'authentification.",
-      "Intégration de l'imprimante Star pour imprimer les billets des commandes et réservations.",
-      "Mise en œuvre du processus de sélection des produits, y compris la sélection des ingrédients, la personnalisation et la finalisation de la commande.",
+      "Conception de l’interface utilisateur (UI/UX) et rédaction du document de spécifications fonctionnelles.",
+      "Développement des interfaces utilisateurs et intégration des API RESTful.",
+      "Mise en place du système d’authentification et de gestion des sessions.",
+      "Intégration de l’imprimante Epson m30 series pour l’impression instantanée des tickets de commande et de réservation.",
+      "Implémentation de la fonctionnalité d’envoi des tickets de commande par email pour plus de commodité.",
+      "Développement du processus de sélection et de personnalisation des produits, incluant la gestion des ingrédients et la finalisation des commandes.",
+      "Contribution au déploiement et à la maintenance de l’application dans plusieurs restaurants en production."
     ],
     screenshots: [...images10],
     showcase: ["", ""],
   },
   {
     id: 11,
-    date: "February-June 2023 / October-January 2025",
-    type: "Freelance",
+    date: "February 2023 -> Today",
+    type: "LayaFood - Freelance",
     place: "Remotely | France",
     placeFR: "Télétravail | France",
-    title: "Tacos Korner dashboard",
+    title: "Tacos Korner Dashboard",
     subtitle:
-      "During my master's degree, I undertook a freelance project to develop a dashboard for the application 'Tacos Korner'.",
+      "Freelance project during my master's degree to develop an advanced dashboard for managing Tacos Korner restaurants.",
     about:
-      "As part of the development process for Tacos Korner, I also created a dashboard to efficiently manage the products available in the application. This dashboard provides an intuitive interface that allows administrators or restaurant staff to easily add, edit, and remove products from the menu.",
-    dateFR: "Février-juin 2023 / octobre-janvier 2025",
-    typeFR: "Freelance",
+      "As part of the Tacos Korner ecosystem, I developed a comprehensive dashboard to efficiently manage restaurants, menus, and operations. The dashboard provides an intuitive interface for administrators and staff to handle multi-restaurant management, track orders, manage products and ingredients, configure promotions, and analyze statistics for better decision-making.",
+    dateFR: "Février 2023 -> Aujourd'hui",
+    typeFR: "LayaFood - Freelance",
     subtitleFR:
-      "Pendant ma maîtrise, j'ai entrepris un projet en freelance pour développer un tableau de bord pour l'application 'Tacos Korner'.",
+      "Projet freelance réalisé pendant ma maîtrise pour développer un tableau de bord avancé pour la gestion des restaurants Tacos Korner.",
     aboutFR:
-      "Dans le cadre du processus de développement de Tacos Korner, j'ai également créé un tableau de bord pour gérer efficacement les produits disponibles dans l'application. Ce tableau de bord offre une interface intuitive qui permet aux administrateurs ou au personnel du restaurant d'ajouter, de modifier et de supprimer facilement des produits du menu.",
-    technologies: ["Stack MERN"],
+      "Dans le cadre de l'écosystème Tacos Korner, j'ai développé un tableau de bord complet pour gérer efficacement les restaurants, les menus et les opérations. Ce tableau de bord offre une interface intuitive aux administrateurs et au personnel pour gérer plusieurs restaurants, suivre les commandes, gérer les produits et ingrédients, configurer des promotions et analyser les statistiques pour une meilleure prise de décision.",
+    technologies: ["Stack MERN", "Rest-API", "Figma", "MongoDB", "NodeJS", "ReactJS"],
     tasks: [
-      "Developed modules for managing items, equipment, human resources, materials, and user management.",
-      "Implemented a calendar for tracking project progress over time.",
-      "Integrated email and notification systems.",
-      "Implemented authentication management.",
-      "Consumption of Apis",
+      "Multi-restaurant management – Secure management of multiple restaurants from a single dashboard.",
+      "Categories, products, ingredients, options, and variations management – Add, edit, and remove items, define type variations, and configure options.",
+      "User management – Control access and roles for staff and administrators.",
+      "History and media management – Track past orders and display images/videos in carousel mode when the user is idle.",
+      "Currency and settings configuration – Adjust currencies, app settings, and preferences.",
+      "Coupons and promotions – Apply discounts or promotions on specific products.",
+      "Backup and mail options – Ensure data safety and email communications.",
+      "Filtering and advanced statistics – Analyze sales, revenue, top-selling products, and visual insights similar to the cashier app."
     ],
     tasksFR: [
-      "Conception de l’application et rédaction de cahier des charges.",
-      "Création des interfaces pour les module de gestion des plats, des ingrédiant, des supplément et des extras",
-      "Création d’une page de statistique du projet, incluant les plats les plus vendus, les revenus",
-      "Consommation des Apis",
-      "Systèmes intégrés de messagerie électronique et de notification.",
-      "Implémentation de la gestion d’authentification",
+      "Gestion multi-restaurants – Administration sécurisée de plusieurs restaurants depuis un seul tableau de bord.",
+      "Gestion des catégories, produits, ingrédients, options et variations – Ajouter, modifier ou supprimer des éléments, définir les types de variations et configurer les options.",
+      "Gestion des utilisateurs – Contrôle des rôles et accès pour le personnel et les administrateurs.",
+      "Gestion de l’historique et des médias – Suivi des commandes passées et affichage des images/vidéos en mode carrousel lorsque l’utilisateur n’interagit pas.",
+      "Configuration de la monnaie et des paramètres – Ajustement des devises, paramètres de l’application et préférences.",
+      "Coupons et promotions – Application de réductions ou promotions sur certains produits.",
+      "Options de sauvegarde et mail – Garantir la sécurité des données et la communication par email.",
+      "Filtres et statistiques avancées – Analyse des ventes, chiffre d’affaires, produits les plus vendus et visualisation claire des informations, comme sur l’application caisse."
     ],
     screenshots: [...images11],
     showcase: ["", ""],
@@ -838,6 +846,53 @@ const data = [
       "Création d’un module de génération et de gestion des certificats pour les participants."
     ],
     screenshots: [...images21],
+    showcase: ["", ""],
+  },
+  {
+    id: 22,
+    date: "March 2025 -> Today",
+    type: "LayaFood - Freelance",
+    place: "Tunis",
+    placeFR: "Tunis",
+    title: "Tacos Korner Cashier App",
+    subtitle:
+      "Development of a real-time mobile cashier management system integrated with the Tacos Korner restaurant platform.",
+    about:
+      "The Tacos Korner Cashier App is a mobile application developed to streamline order management and improve coordination between restaurant staff and customers. Designed as a companion to the self-ordering kiosk, this app enables cashiers to efficiently manage incoming orders, payments, and product statuses in real time. It is currently in active use across several restaurants in France, supporting multi-restaurant management with reliable performance and user-friendly design.",
+    dateFR: "Mars 2025 -> Aujourd'hui",
+    typeFR: "LayaFood - Freelance",
+    subtitleFR:
+      "Développement d’une application mobile de caisse en temps réel intégrée à la plateforme de gestion Tacos Korner.",
+    aboutFR:
+      "L’application mobile de caisse Tacos Korner a été développée afin d’optimiser la gestion des commandes et d’améliorer la coordination entre le personnel du restaurant et les clients. Conçue comme un complément du kiosque de commande libre-service, elle permet aux caissiers de gérer efficacement les commandes, les paiements et les statuts des produits en temps réel. Déployée dans plusieurs restaurants en France, elle offre une gestion multi-établissements fluide, des performances fiables et une interface conviviale.",
+    technologies: [
+      "Firebase push notification",
+      "Flutter",
+      "Epson",
+      "Epson m30 series",
+      "NodeJS",
+      "WebSocket",
+      "Rest-API",
+      "MongoDB",
+      "Figma"
+    ],
+    tasks: [
+      "Authentification et gestion multi-restaurants – Connexion sécurisée et accès différencié selon le rôle et l’établissement.",
+      "Commandes et notifications en temps réel – Intégration de WebSocket et Firebase pour recevoir instantanément les nouvelles commandes et leurs mises à jour.",
+      "Impression de tickets – Intégration d’imprimantes Epson pour générer les tickets de commandes et de réservations.",
+      "Statistiques de ventes et revenus – Analyse détaillée des ventes quotidiennes, du chiffre d’affaires et des produits les plus vendus.",
+      "Gestion des produits – Consultation des fiches produits et mise à jour du statut des commandes (en cours, terminée, annulée, etc.) en temps réel.",
+      "UI/UX et cahier des charges – Conception complète de l’interface utilisateur et rédaction du cahier des charges fonctionnel et technique."
+    ],
+    tasksFR: [
+      "Authentification et gestion multi-restaurants – Connexion sécurisée et accès différencié selon le rôle et l’établissement.",
+      "Commandes et notifications en temps réel – Intégration de WebSocket et Firebase pour recevoir instantanément les nouvelles commandes et leurs mises à jour.",
+      "Impression de tickets – Intégration d’imprimantes Epson pour générer automatiquement les tickets de commandes et de réservations.",
+      "Statistiques de ventes et revenus – Analyse détaillée des ventes quotidiennes, du chiffre d’affaires et des produits les plus vendus.",
+      "Gestion des produits – Consultation des fiches produits et mise à jour du statut des commandes (en cours, terminée, annulée, etc.) en temps réel.",
+      "UI/UX et cahier des charges – Conception complète de l’interface utilisateur et rédaction du cahier des charges fonctionnel et technique."
+    ],
+    screenshots: [...images22],
     showcase: ["", ""],
   }
 ];
